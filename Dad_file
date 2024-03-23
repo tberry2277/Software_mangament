@@ -252,9 +252,9 @@ def login(user,password):
         conn.close()
 
 def login_click():
-    a = username_entry.get()
-    b = password_entry.get()
-    login(a,b)
+    username = username_entry.get()
+    password = password_entry.get()
+    login(username, password)
 # Function to initialize the database
 
 def register_click():
@@ -271,7 +271,10 @@ def register_click():
     else:
         messagebox.showerror("Error", "Passwords do not match.")
 
-
+def open_registration_window():
+    global registration_window
+    registration_window = tk.Toplevel(root)
+    registration_window.title("Register")
 
 # Function to add a new user
 
