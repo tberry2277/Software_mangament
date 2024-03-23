@@ -256,6 +256,7 @@ def login_click():
     b = password_entry.get()
     login(a,b)
 # Function to initialize the database
+
 def register_click():
     username = username_entry.get()
     password = password_entry.get()
