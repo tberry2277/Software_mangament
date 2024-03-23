@@ -276,10 +276,6 @@ def open_registration_window():
     registration_window = tk.Toplevel(root)
     registration_window.title("Register")
 
-# Function to add a new user
-
-
-
 def authentication():
     return
 
