@@ -322,16 +322,59 @@ log_in_site.title("Login")
 
 # (Code for username label, entry, password label, entry, login button)
 
+# Create the login window
+log_in_site = tk.Tk()
+log_in_site.title("Login")
+
+# Username label and entry
+username_label = tk.Label(log_in_site, text="Username:")
+username_label.grid(row=0, column=0, padx=5, pady=5)
+username_entry = tk.Entry(log_in_site)
+username_entry.grid(row=0, column=1, padx=5, pady=5)
+
+# Password label and entry
+password_label = tk.Label(log_in_site, text="Password:")
+password_label.grid(row=1, column=0, padx=5, pady=5)
+password_entry = tk.Entry(log_in_site, show="*")
+password_entry.grid(row=1, column=1, padx=5, pady=5)
+
 # Login button
 log_in_button = tk.Button(log_in_site, text="LOGIN", command=login_click)
-log_in_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
+log_in_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
 # Registration button
 register_button = tk.Button(log_in_site, text="Register", command=open_registration_window)
-register_button.grid(row=4, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
+register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
+
+# Create the registration window
+registration_window = tk.Tk()
+registration_window.title("Register")
+
+# Username label and entry
+username_label = tk.Label(registration_window, text="Username:")
+username_label.grid(row=0, column=0, padx=5, pady=5)
+username_entry = tk.Entry(registration_window)
+username_entry.grid(row=0, column=1, padx=5, pady=5)
+
+# Password label and entry
+password_label = tk.Label(registration_window, text="Password:")
+password_label.grid(row=1, column=0, padx=5, pady=5)
+password_entry = tk.Entry(registration_window, show="*")
+password_entry.grid(row=1, column=1, padx=5, pady=5)
+
+# Confirm Password label and entry
+confirm_password_label = tk.Label(registration_window, text="Confirm Password:")
+confirm_password_label.grid(row=2, column=0, padx=5, pady=5)
+confirm_password_entry = tk.Entry(registration_window, show="*")
+confirm_password_entry.grid(row=2, column=1, padx=5, pady=5)
+
+# Register button
+register_button = tk.Button(registration_window, text="Register", command=register_click)
+register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
 # Start the main loop for the login window
 log_in_site.mainloop()
+
 
 
 # Start the main loop
