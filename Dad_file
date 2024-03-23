@@ -313,18 +313,14 @@ registration_window.title("Register")
     # (Code for username label, entry, password label, entry, confirm password label, entry, and register button)
 
     # Register button
-    register_button = tk.Button(registration_window, text="Register", command=register_click)
-    register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
+register_button = tk.Button(registration_window, text="Register", command=register_click)
+register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
 # Create the login window
 log_in_site = tk.Tk()
 log_in_site.title("Login")
 
 # (Code for username label, entry, password label, entry, login button)
-
-# Create the login window
-log_in_site = tk.Tk()
-log_in_site.title("Login")
 
 # Username label and entry
 username_label = tk.Label(log_in_site, text="Username:")
