@@ -342,11 +342,6 @@ confirm_password_entry.grid(row=2, column=1, padx=5, pady=5)
 # Register button
 register_button = tk.Button(registration_window, text="Register", command=register_click)
 register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
-
-# Start the main loop for the login window
-log_in_site.mainloop()
-
-
-
+)
 # Start the main loop
 root.mainloop()
