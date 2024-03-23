@@ -283,27 +283,6 @@ def open_registration_window():
 def authentication():
     return
 
-
-#create login page
-
-log_in_site = tk.Tk()
-log_in_site.title("Login")
-
-username_label = tk.Label(log_in_site, text="Username")
-username_label.grid(row=0, column=0, padx=5, pady=5)
-
-username_entry = tk.Entry(log_in_site)
-username_entry.grid(row=0, column=1, padx=5, pady=5)
-
-password_label = tk.Label(log_in_site, text="Password")
-password_label.grid(row=1, column=0, padx=5, pady=5)
-
-password_entry = tk.Entry(log_in_site, show="*")
-password_entry.grid(row=1, column=1, padx=5, pady=5)
-
-log_in_button = tk.Button(log_in_site, text="LOGIN", command=login_click)
-log_in_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
-
 # Create the registration window
 registration_window = tk.Tk()
 registration_window.title("Register")
@@ -337,10 +316,6 @@ password_entry.grid(row=1, column=1, padx=5, pady=5)
 # Login button
 log_in_button = tk.Button(log_in_site, text="LOGIN", command=login_click)
 log_in_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
-
-# Registration button
-register_button = tk.Button(log_in_site, text="Register", command=open_registration_window)
-register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
 # Create the registration window
 registration_window = tk.Tk()
