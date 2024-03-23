@@ -309,28 +309,29 @@ registration_window = tk.Tk()
 registration_window.title("Register")
 
 # Create and place the widgets for the registration window
-username_label = tk.Label(registration_window, text="Username:")
-username_label.grid(row=0, column=0, padx=5, pady=5)
+# Create and place the widgets for the registration window
+    # (Code for username label, entry, password label, entry, confirm password label, entry, and register button)
 
-username_entry = tk.Entry(registration_window)
-username_entry.grid(row=0, column=1, padx=5, pady=5)
+    # Register button
+    register_button = tk.Button(registration_window, text="Register", command=register_click)
+    register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
-password_label = tk.Label(registration_window, text="Password:")
-password_label.grid(row=1, column=0, padx=5, pady=5)
+# Create the login window
+log_in_site = tk.Tk()
+log_in_site.title("Login")
 
-password_entry = tk.Entry(registration_window, show="*")
-password_entry.grid(row=1, column=1, padx=5, pady=5)
+# (Code for username label, entry, password label, entry, login button)
 
-confirm_password_label = tk.Label(registration_window, text="Confirm Password:")
-confirm_password_label.grid(row=2, column=0, padx=5, pady=5)
+# Login button
+log_in_button = tk.Button(log_in_site, text="LOGIN", command=login_click)
+log_in_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
-confirm_password_entry = tk.Entry(registration_window, show="*")
-confirm_password_entry.grid(row=2, column=1, padx=5, pady=5)
+# Registration button
+register_button = tk.Button(log_in_site, text="Register", command=open_registration_window)
+register_button.grid(row=4, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
 
-register_button = tk.Button(registration_window, text="Register", command=register_click)
-register_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="WE")
-
-
+# Start the main loop for the login window
+log_in_site.mainloop()
 
 
 # Start the main loop
