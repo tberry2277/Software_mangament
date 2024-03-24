@@ -190,6 +190,17 @@ def register_click():
     else:
         messagebox.showerror("Error", "Passwords do not match.")
 
+# Function to add a new user
+def register_user(username, password):
+    conn = sqlite3.connect('users.db')
+    c = conn.cursor()
+    try:
+        c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
+        conn.commit()
+        messagebox.showinfo("Success", "Registration successful!")
+    except sqlite3.IntegrityError:
+        messagebox.showerror("Error", "Username already exists. Please choose another username.")
+    conn.close()
 
 # Initialize the database
 initialize_database()
@@ -262,7 +273,6 @@ def login_click():
     username = username_entry.get()
     password = password_entry.get()
     login(username, password)
-
 
 # Login button
 log_in_button = tk.Button(log_in_site, text="LOGIN", command=login_click)
